@@ -19,6 +19,7 @@ const App = () => {
 
   return (
     <div>
+      <h1>Anecdote of the day</h1>
       {anecdotes[selected]}
       <p>has {votes[selected]} votes</p>
       <div>
@@ -40,6 +41,9 @@ const App = () => {
           next anecdote
         </button>
       </div>
+      <h1>Anecdote with most votes</h1>
+      {anecdotes[votes.indexOf(Math.max(...votes))]}
+      <p>has {Math.max(...votes)} votes </p>
     </div>
   );
 };
